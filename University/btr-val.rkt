@@ -26,4 +26,7 @@
 (btr-val "+--+")
 (btr-val "-")
 (btr-val "-++++")
-       
+
+(btr-val "-+--")
+(btr-val "+")
+(btr-val "-+-.")
