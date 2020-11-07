@@ -15,12 +15,12 @@
 (define manhattan-3d  ;val: intero
   (lambda (i j k)     ; i, j, k: interi non negativi
     (cond ((= i 0)
-           (manhattan-2d j k))  ;se i = 0 svolgi manhattan in 2d con j e k
+           (manhattan-2d j k)) 
           ((= j 0)
-           (manhattan-2d i k))  ;se j = 0 svolgi manhattan 2d con i e k
+           (manhattan-2d i k)) 
           ((= k 0)
-           (manhattan-2d i j))  ; se k = 0 svolgi manhattan 2d con i e j
-          (else      ;altrimenti ricorsione
+           (manhattan-2d i j))  
+          (else      
            (+ (manhattan-3d (- i 1) j k)
               (manhattan-3d i (- j 1) k)
               (manhattan-3d i j (- k 1)))
