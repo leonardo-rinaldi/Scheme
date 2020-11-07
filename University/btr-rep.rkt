@@ -21,7 +21,7 @@
           (r (remainder n 3))
           )
       (cond
-        ((< (abs n) 2)    ; (abs n) mi da il valore assoluto del numero (abs -3) --> 3
+        ((< (abs n) 2)    
          (btd-rep n))
         ((= r 2)
          (string-append
