@@ -6,20 +6,12 @@
 ;di caratteri, come nel caso di "ilredevevederli" e "acetonellenoteca". Scrivi un programma
 ;in Scheme che consenta di verificae se una data stringa è palindrome.
 
-
-;Procedimento:
-; controllo per prima cosa se la stringa è lunga 0 oppure 1, in quel caso è true
-; altrimenti faccio un and (che, se anche un elemento è false mi darà false come
-; risultato) di un equal? che confronta la prima lettera della stringa con l'ultima
-; e la ricorsione che a sua volta controllerà la prima lettera con l'ultima e darà
-; true o false.
-
 (define palindrome? ;val: booleano
   (lambda (s)       ;s: stringa
     (if (or (= (string-length s) 0) (= (string-length s) 1))
        true
       (and
-       (equal? (substring s 0 1) (substring s (- (string-length s) 1) (string-length s))) ;faccio un and del confronto tra la prima lettera e l'ultima e la ricorsione che confronterà la prima lettera e l'ultima se ho anche un false il risultato darà false, se sono tutti true il risultato sarà true
+       (equal? (substring s 0 1) (substring s (- (string-length s) 1) (string-length s)))
        (palindrome? (substring s 1 (- (string-length s) 1))))
       )
     )
