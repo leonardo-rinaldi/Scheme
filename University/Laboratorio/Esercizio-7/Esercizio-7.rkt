@@ -33,11 +33,11 @@
 (define sorted-ins ;val: lista
   (lambda (x s)    ;x: intero, s: lista
     (cond
-      ((null? s) ; se la lista s è nulla
+      ((null? s) 
        (cons x s))
-      ((equal? x (car s))  ; se il numero è già presente nella lista
+      ((equal? x (car s)) 
        s)
-       ((> (car s) x)  ; per trovare la giusta posizione al numero
+       ((> (car s) x)  
         (cons x (cons (car s) (cdr s))))
         (else
           (cons (car s) (sorted-ins x (cdr s)))
